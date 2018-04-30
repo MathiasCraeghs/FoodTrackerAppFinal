@@ -19,6 +19,10 @@ public class JSONArrayCursor extends AbstractCursor {
     private String[] mColumnNames;
     private JSONObject mJsonObject;
 
+    /**
+     * This class returns a JSON cursor from a string.
+     * This class was provided by Niek Vandael.
+     */
     public JSONArrayCursor(JSONObject jsonObject) {
         if (jsonObject != null) {
             JSONObject tempObj = null;

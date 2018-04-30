@@ -177,9 +177,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     /**
      * checks if the permissions are granted
-     * @param requestCode
-     * @param permissions
-     * @param grantResults
+     * @param requestCode requestCode
+     * @param permissions permissions
+     * @param grantResults grantResults
      */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

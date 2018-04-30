@@ -30,7 +30,10 @@ public class ChildActivity extends AppCompatActivity implements OnMapReadyCallba
     private double latI,lngI;
     private String scoreNull = "0";
 
-
+    /**
+     * the method that is called when the activity is starts
+     * @param savedInstanceState savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +82,10 @@ public class ChildActivity extends AppCompatActivity implements OnMapReadyCallba
 
     }
 
+    /**
+     * creates the google map and loads the skin
+     * @param googleMap googleMap
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         try {

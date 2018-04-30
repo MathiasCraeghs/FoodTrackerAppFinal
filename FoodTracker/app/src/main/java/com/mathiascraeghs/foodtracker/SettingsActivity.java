@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 public class SettingsActivity extends AppCompatActivity {
-
+    /**
+     * method when the activity is started
+     * @param savedInstanceState SavedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +22,11 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id =item.getItemId();

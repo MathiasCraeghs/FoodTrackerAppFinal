@@ -18,6 +18,12 @@ import android.widget.TextView;
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantAdapterViewHolder> {
     private Context mContext;
     private Cursor mCursor;
+
+    /**
+     * the constructor for the adapter
+     * @param context context
+     * @param cursor cursor
+     */
     public RestaurantAdapter(Context context, Cursor cursor){
 
         this.mContext = context;
@@ -25,6 +31,12 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     }
 
+    /**
+     * create the viewholder for the recyclerview
+     * @param parent parent
+     * @param viewType viewType
+     * @return viewholder
+     */
     @Override
     public RestaurantAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
@@ -40,6 +52,11 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     }
 
+    /**
+     * binds content to the viewholder
+     * @param holder viewholder where to bind content to
+     * @param position position of the adapter in the cursor
+     */
     @Override
     public void onBindViewHolder(RestaurantAdapterViewHolder holder, int position) {
       if(!mCursor.moveToPosition(position)) return;
@@ -70,6 +87,10 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     }
 
+    /**
+     *Return the number of items in the cursor
+     * @return the number of items in the cursor
+     */
     @Override
     public int getItemCount() {
 
@@ -77,11 +98,17 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         return mCursor.getCount();
     }
 
-
+    /**
+     * The viewholder for the recyclerview that is going to hold the content.
+     */
     class RestaurantAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
       private  TextView listItemNumberView;
       private ImageView scoreView;
 
+        /**
+         * the constructor for the view
+         * @param view the view
+         */
         public RestaurantAdapterViewHolder(View view) {
             super(view);
 
@@ -90,6 +117,11 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
             view.setOnClickListener(this);
         }
 
+        /**
+         * triggers when there is clicked on a view
+         * starts the childactivity and gives information whit it
+         * @param view the view where is clicked on
+         */
         @Override
         public void onClick(View view) {
             int adapterPosition= getAdapterPosition();
